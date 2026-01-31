@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát Chồn Vn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #00ff99;
+        }
+
+        .box {
+            border: 2px dashed #00ff99;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input {
+            margin-top: 15px;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🐹 Phát Chồn Vn 🐹</h1>
+    <p>Trang web upload ảnh đơn giản</p>
+
+    <div class="box">
+        <p>Chọn ảnh từ máy</p>
+        <input type="file" accept="image/*" onchange="loadImage(event)">
+        <img id="preview">
+    </div>
+
+    <script>
+        function loadImage(event) {
+            const img = document.getElementById("preview");
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+
+</body>
+</html>
